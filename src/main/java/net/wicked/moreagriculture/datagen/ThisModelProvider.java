@@ -27,12 +27,11 @@ public class ThisModelProvider extends ModelProvider {
         // return ModBlocks.getAllBlocks();
         return Stream.empty();
     }
-    /*
+
     @Override
     protected BlockModelGenerators getBlockModelGenerators(BlockStateGeneratorCollector blocks, ItemInfoCollector items, SimpleModelCollector models) {
-        return new ExampleBlockModelGenerator(blocks, items, models);
+        return new ThisBlockModelGenerator(blocks, items, models);
     }
-    */
 
     @Override
     protected ItemModelGenerators getItemModelGenerators(ItemInfoCollector items, SimpleModelCollector models) {
