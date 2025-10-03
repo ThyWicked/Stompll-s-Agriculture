@@ -8,6 +8,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.List;
+import java.util.stream.Stream;
+
 public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS =
@@ -30,5 +33,14 @@ public class ModItems {
 
     public static DeferredRegister<Item> getMaterialItems() {
         return ITEMS;
+    }
+
+    public static Stream<Item> getAllItems() {
+        var itemRegistries = List.of(ITEMS);
+        Stream<Item> out = Stream.empty();
+        for (DeferredRegister<Item> registry : itemRegistries) {
+            out = Stream.concat(out, registry.getEntries().stream().map(RegistryObject::get));
+        }
+        return out;
     }
 }
