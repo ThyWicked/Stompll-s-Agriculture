@@ -1,6 +1,8 @@
 package net.wicked.moreagriculture;
 
 import com.mojang.logging.LogUtils;
+import net.minecraftforge.data.event.GatherDataEvent;
+import net.wicked.moreagriculture.datagen.ThisModelProvider;
 import net.wicked.moreagriculture.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -52,5 +54,11 @@ public final class MoreAgriculture {
         public static void onClientSetup(FMLClientSetupEvent event) {
 
         }
+    }
+
+    public static void gatherData(GatherDataEvent event) {
+        var gen = event.getGenerator();
+        var output = gen.getPackOutput();
+        gen.addProvider(event.includeClient(), new ThisModelProvider(output));
     }
 }

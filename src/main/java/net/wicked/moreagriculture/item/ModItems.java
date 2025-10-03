@@ -27,4 +27,8 @@ public class ModItems {
     public static void register(BusGroup eventBus) {
         ITEMS.register(eventBus);
     }
+
+    public static DeferredRegister<Item> getMaterialItems() {
+        return ITEMS;
+    }
 }
