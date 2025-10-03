@@ -19,6 +19,7 @@ public class ThisModelProvider extends ModelProvider {
     protected Stream<Item> getKnownItems() {
         return ModItems.getAllItems();
     }
+
     /*
     @Override
     protected Stream<Block> getKnownBlocks() {
@@ -29,8 +30,7 @@ public class ThisModelProvider extends ModelProvider {
     protected BlockModelGenerators getBlockModelGenerators(BlockStateGeneratorCollector blocks, ItemInfoCollector items, SimpleModelCollector models) {
         return new ExampleBlockModelGenerator(blocks, items, models);
     }
-
-     */
+    */
 
     @Override
     protected ItemModelGenerators getItemModelGenerators(ItemInfoCollector items, SimpleModelCollector models) {

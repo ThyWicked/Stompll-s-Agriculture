@@ -30,6 +30,8 @@ public final class MoreAgriculture {
 
         ModItems.register(modBusGroup);
 
+        GatherDataEvent.getBus(modBusGroup).addListener(MoreAgriculture::gatherData);
+
         // Register the item to a creative tab
         BuildCreativeModeTabContentsEvent.getBus(modBusGroup).addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
