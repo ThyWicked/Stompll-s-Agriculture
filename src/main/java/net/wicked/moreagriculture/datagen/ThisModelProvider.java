@@ -24,7 +24,8 @@ public class ThisModelProvider extends ModelProvider {
 
     @Override
     protected Stream<Block> getKnownBlocks() {
-        return ModBlocks.getAllBlocks();
+        // return ModBlocks.getAllBlocks();
+        return Stream.empty();
     }
     /*
     @Override

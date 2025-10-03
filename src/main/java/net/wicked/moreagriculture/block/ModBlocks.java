@@ -15,6 +15,8 @@ public class ModBlocks {
     private static final DeferredRegister<Block> BUILDING_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
     private static final DeferredRegister<Item> BUILDING_BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
+    public static DeferredRegister<Block> getBuildingBlocks() {return BUILDING_BLOCKS;}
+    public static DeferredRegister<Item> getBuildingBlockItems() {return BUILDING_BLOCK_ITEMS;}
 
     public static Stream<Block> getAllBlocks() {
         var blockRegistries = List.of(BUILDING_BLOCKS);
