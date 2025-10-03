@@ -6,6 +6,7 @@ import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.wicked.moreagriculture.block.ModBlocks;
 import net.wicked.moreagriculture.item.ModItems;
 
 import java.util.stream.Stream;
@@ -20,12 +21,12 @@ public class ThisModelProvider extends ModelProvider {
         return ModItems.getAllItems();
     }
 
-    /*
+
     @Override
     protected Stream<Block> getKnownBlocks() {
-        return ExampleBlocks.getAllBlocks();
+        return ModBlocks.getAllBlocks();
     }
-
+    /*
     @Override
     protected BlockModelGenerators getBlockModelGenerators(BlockStateGeneratorCollector blocks, ItemInfoCollector items, SimpleModelCollector models) {
         return new ExampleBlockModelGenerator(blocks, items, models);
